@@ -1,0 +1,10 @@
+img.lazy, img.lazyload {
+    width: 100%;
+	opacity: 0;
+    //filter: blur(8px);
+    transition: opacity 0.6s
+}
+
+img.lazy.loaded, img.lazyloaded {
+    opacity: 1;
+}

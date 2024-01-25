@@ -1,0 +1,122 @@
+.frm_form_fields input[type="text"],
+.frm_form_fields input[type="email"],
+.frm_form_fields input[type="tel"],
+.frm_form_fields input[type="number"],
+.frm_form_fields input[type="search"],
+.frm_form_fields select,
+.frm_form_fields textarea {
+    height: 30px!important;
+    line-height: 1.2!important;
+    padding: 0 0 5px 0!important;
+    margin: 0 0 20px!important;
+    background: transparent!important;
+    width: 100%!important;
+    font-weight: $font-weight-semibold!important;
+	border-top: none !important;
+	border-right: none !important;
+	border-left: none !important;
+	border-bottom: 2px solid $coreDarkBlue !important;
+	border-radius: 0!important;
+	box-shadow: inset 0px 0px 0px 0px !important;
+	box-shadow: none !important;
+	appearance: none !important;
+  	-moz-appearance: none !important;
+ 	-webkit-appearance: none !important;
+	color: $coreDarkBlue;
+	transition: 0.3s all
+}
+.frm_form_fields input[type="text"]:focus,
+.frm_form_fields input[type="email"]:focus,
+.frm_form_fields input[type="tel"]:focus,
+.frm_form_fields input[type="number"]:focus,
+.frm_form_fields input[type="search"]:focus {
+	border-bottom: 2px solid $coreDarkBlue !important;
+	height: 40px!important;
+}
+.frm_form_fields input[type="text"]::placeholder,
+.frm_form_fields input[type="email"]::placeholder,
+.frm_form_fields input[type="tel"]::placeholder,
+.frm_form_fields input[type="number"]::placeholder,
+.frm_form_fields input[type="search"]::placeholder,
+.frm_form_fields select::placeholder,
+.frm_form_fields textarea::placeholder {
+	color: $coreDarkGray
+}
+.frm_form_fields select {
+	 font-weight: $font-weight-normal!important;
+	color: $coreDarkGray
+}
+.frm_form_fields .frm_primary_label {
+	padding: 0 !important;
+}
+.frm_form_fields textarea:focus {
+	border-bottom: 2px solid $coreDarkBlue !important;
+}
+.frm_form_fields select {
+	padding-top: 0!important;
+	padding-bottom: 0!important;
+	background-image: url("../../includes/images/core-select-icon.svg")!important;
+	background-position: right 5px center!important;
+	background-repeat: no-repeat!important;
+	background-size: 15px 15px!important;
+}
+.frm_submit {
+	width: 100%;
+	transition: 0.3s all!important;
+}
+.frm_label_float_top label {
+	color: $coreDarkBlue !important;
+	font-weight: 700!important;
+}
+.frm_html_container {
+	margin: 0!important
+}
+@supports (-webkit-appearance: none) or (appearance: none) or ((-moz-appearance: none) and (mask-type: alpha)) {
+  	.frm_form_fields select::after {
+    	display: block;
+	}
+	.frm_form_fields select {
+    	padding-right: 2em;
+    	-webkit-appearance: none !important;
+    	-moz-appearance: none !important;
+    	appearance: none !important;
+		width: 100%!important;
+  	}
+}
+@include media-breakpoint-down(lg) {
+
+	.frm_form_fields textarea {
+		height: 80px!important;
+	}
+}
+@include media-breakpoint-up(lg) {
+	.frm_fields_container {
+		display: flex !important;
+		justify-content: space-between !important;
+		gap: 2rem !important;
+		flex-wrap: wrap
+	}
+	.frm_half {
+		flex-basis: calc(50% - 2rem) !important;
+	}
+	.frm_submit.focused {
+		margin-top: -4rem!important
+	}
+	.frm_form_fields textarea {
+		height: 100px!important;
+	}
+	
+}
+@include media-breakpoint-down(xxl) {
+	.frm_submit {
+		margin-top: 0!important
+	}
+}
+@include media-breakpoint-up(xxl) {
+	.frm_submit {
+		margin-top: 1.5rem!important
+	}
+	.frm_form_fields textarea {
+		height: 150px!important;
+	}
+}

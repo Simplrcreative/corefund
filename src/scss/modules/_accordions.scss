@@ -1,0 +1,32 @@
+@include media-breakpoint-down(md) {
+	
+	.accordion { 
+		height: auto;
+		display: block;
+	}
+	.accordion-item .accordion-collapse, .accordion-item:last-of-type .accordion-collapse {
+		border-bottom-left-radius: 0!important;
+		border-bottom-right-radius: 0!important
+	}
+	.accordion-header, .accordion-item .accordion-collapse.show, .accordion-item:last-of-type .accordion-collapse.show {
+		border-bottom: none;
+	}
+	.accordion-item .accordion-collapse {
+		height: 1px;
+		overflow: hidden;
+		border-bottom: none;
+		transition: 0.4s ease
+	}
+	.accordion-item .accordion-collapse.show {
+		height: auto;
+		transition: 0.4s all ease
+	}
+	.collapsing {
+		transition: 0.4s all ease;
+	  }
+}
+@include media-breakpoint-up(md) {
+	.accordion-item {
+		display: none;
+	}
+}

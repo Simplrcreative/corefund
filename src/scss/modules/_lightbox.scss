@@ -1,0 +1,77 @@
+.form-lightbox-inner {
+	position: relative;
+	z-index: 2;
+	background-color: #ffffff;
+	padding:20px 40px;
+	max-width: 600px;
+	margin: auto;
+
+}
+
+
+.hs-form {
+	margin-top: 0px;
+}
+
+.form-lightbox {
+	pointer-events: none;
+	position: fixed;
+	left: 0%;
+	top: 0%;
+	right: 0%;
+	bottom: 0%;
+	z-index: 9999;
+	display: flex;
+	overflow: auto;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	align-items: center;
+	opacity: 0;
+	transition: opacity 200ms ease;
+}
+
+.form-lightbox.open {
+	pointer-events: inherit;
+	opacity: 1;
+}
+
+.form-lightbox-overlay {
+	position: fixed;
+	left: 0%;
+	top: 0%;
+	right: 0%;
+	bottom: 0%;
+	background-color: rgba(20, 20, 20, 0.9);
+	cursor: pointer;
+}
+
+
+.form-lightbox-right {
+	color: #333;
+	padding: 40px 60px;
+}
+
+.form-lightbox-close {
+	position: absolute;
+	left: auto;
+	top: 0%;
+	right: 0%;
+	bottom: auto;
+	display: block;
+	padding: 20px;
+	align-items: center;
+	transition: opacity 200ms ease;
+	cursor: pointer;
+	height: 48px;
+	display: flex;
+	align-items:center
+}
+
+.form-lightbox-close:hover {
+	opacity: 0.8;
+}
+
+.form-lightbox-container {
+	margin-top: auto;
+	margin-bottom: auto;
+}

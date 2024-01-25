@@ -1,0 +1,8 @@
+.breadcrumb {list-style: none;padding: 0; @include margin-bottom(1.5rem);}
+.breadcrumb li {display: inline-block;   @include fluid-type(18px,24px); @include fluid-line-height(26px,32px);}
+.breadcrumb li:after {content:'|'; display:inline-block;padding:0 5px}
+.breadcrumb li:last-child:after {display:none}
+.breadcrumb li a {position: relative; text-decoration:none; transition:color 0.4s}
+.breadcrumb li a:before {content: ''; position: absolute;bottom: 0; display: block;left: 0;right: 0;width: 0;height: 1px;background: $yellow; transition:width 0.3s}
+.breadcrumb li a:hover:before {width: 100%}
+.breadcrumb li a:hover { color: $yellow; }

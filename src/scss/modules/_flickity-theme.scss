@@ -1,0 +1,82 @@
+.draging .carousel-cell {pointer-events:none}
+
+@include media-breakpoint-down(md) {
+	/* enable Flickity by default */
+	.slider-overflow:after {
+	  content: 'flickity';
+	  display: none; /* hide :after */
+	}
+	
+	.draging .carousel-cell {pointer-events:none}
+}
+
+@include media-breakpoint-up(md) {
+	  /* disable Flickity for large devices */
+	  .slider-overflow:after {
+	    content: '';
+	  }
+}
+
+
+
+.flickity-viewport {
+  transition: height 0.2s;
+}
+.carousel-2 .flickity-page-dots {bottom: -3.3em;}
+
+@include media-breakpoint-down(xxl) {
+	.carousel-2 .flickity-page-dots {bottom: -45px;}
+}
+
+@include media-breakpoint-down(md) {
+	.carousel-2 .flickity-page-dots {bottom:-35px;}
+}
+
+
+@include media-breakpoint-down(sm) {
+	.carousel-2 .flickity-page-dots {bottom: 0;}
+}
+
+
+
+.carousel-3 .carousel-cell {width: calc(100% - 100px); opacity: 0.4; transition:opacity 0.4s}
+.carousel-3 .carousel-cell.is-selected {opacity: 1}
+
+
+@include media-breakpoint-down(md) {
+	.carousel-3 .carousel-cell {width: calc(100% - 40px); }
+}
+
+
+
+
+.carousel-3 .flickity-viewport {
+    overflow: visible;
+}
+
+
+@include media-breakpoint-up(lg) {
+	.carousel-3 .flickity-page-dots {display: none;}
+}
+
+
+@include media-breakpoint-down(lg) {
+	.carousel-3 .flickity-page-dots {bottom:-35px;}
+}
+
+@include media-breakpoint-down(sm) {
+	.carousel-3 .flickity-page-dots {bottom: 0;}
+}
+
+
+/* Custom buttons */
+.slider-button {margin: 0 7px; cursor: pointer; user-select: none}
+
+.slider-button rect, .slider-button path {transition: fill 0.3s, opacity 0.3s}
+.slider-button rect{fill:transparent}
+.slider-button:not(.disabled):hover rect {fill:#fff}
+.slider-button.disabled rect, .slider-button.disabled path {opacity: 0.4}
+
+.slider-button:not(.disabled):active {transform:scale(0.97)}
+
+.bg-dark .slider-button:not(.disabled):hover rect {fill:#2C2F36}

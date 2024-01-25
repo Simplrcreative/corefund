@@ -1,0 +1,115 @@
+section.landing {
+	z-index: -1;
+}
+section.about-us {
+	background-image: url("../../includes/images/core-graphic-blue.svg")!important;
+	background-position: bottom left;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.container {
+	margin-left: auto;
+	margin-right: auto;
+    width: 100%;
+    max-width: 1920px
+}
+
+.container-fluid {
+	max-width: 1920px
+}
+
+.inner {
+	max-width: 1400px;
+	width: 100%;
+	margin: auto;
+}
+
+.inner-narrow {
+	max-width: 1080px;
+	width: 100%;
+	margin: auto;
+}
+.inner-small {
+	max-width: 600px;
+	width: 100%;
+	margin: auto;
+}
+
+.block {
+	width: 6em;
+	height: 6em
+}
+.container-absolute.left {
+	left: 5%;
+}
+.container-absolute.right {
+	right: 5%;
+}
+/*.tab {
+	display:none;
+}
+.tab.active {
+	display: block;
+}*/
+.bottom-min-1 {
+	bottom: -1px!important;
+	margin-bottom: -1px!important;
+}
+@include media-breakpoint-down(md) {
+	section {
+		padding: 35px 0
+	}
+	.container {
+		padding-left: 8%;
+		padding-right: 8%;
+	}
+	
+}
+@include media-breakpoint-up(md) {
+	section {
+		padding: 6em 0
+	}
+	.container {
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+}
+@include media-breakpoint-down(lg) {
+	.body * {
+		scroll-behavior: smooth;
+	}
+	.statistics {
+		background-color: $coreWhite
+	}
+}
+@include media-breakpoint-up(lg) {
+	.min-full-height {
+		min-height: 100vh
+	}
+	.full-height {
+		height: 100vh
+	}
+	section.landing {
+		padding: 5em 0 6em 0
+	}
+	section.statistics {
+		display: flex;
+		align-items: center;
+	}
+	.horizontal-scroll-inner {
+		width: 400vw
+	}
+	section.contact {
+		min-height: 930px;
+		overflow-y: hidden;
+	}
+	section.contact .form-container { 
+		min-height: 1400px
+	}
+}
+@include media-breakpoint-up(xxl) {
+	.container {
+		padding-left: 14%;
+		padding-right: 14%;
+	}
+}
