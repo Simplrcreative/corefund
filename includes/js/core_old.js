@@ -71,30 +71,6 @@ jQuery(document).ready(function($) {
 					duration: 500,
 					easing: 'swing',
 					step: function () {
-						$this.text(this.Counter.toFixed(0));
-						
-					}
-				});
-			} else {
-				$({ Counter: 0 }).animate({ Counter: $thisAmt }, {
-					duration: 1000,
-					easing: 'swing',
-					step: function () {
-						var number = Math.ceil(this.Counter);
-						$this.text(number.toLocaleString("en-GB"));
-					}
-				});
-			}
-		});
-
-		$('.animated-amount-percent').each(function () {
-			var $this = $(this);
-			var $thisAmt = $(this).attr('data-amt');
-			if($thisAmt % 1 != 0) {
-				$({ Counter: 0 }).animate({ Counter: $thisAmt }, {
-					duration: 500,
-					easing: 'swing',
-					step: function () {
 						$this.text(this.Counter.toFixed(2));
 						
 					}

@@ -602,6 +602,12 @@
 												$statistic_unit_before = $statistic['statistic_unit_before'];
 												$statistic_unit_after = $statistic['statistic_unit_after'];
 												$statistic_icon = $statistic['statistic_icon'];
+												$statistic_animation = $statistic['animation_type'];
+												if($statistic_animation === 'percentage') {
+													$statistic_class = '';
+												} else {
+													$statistic_class = '';
+												}
 
 												echo '<div class="col col-lg-6">';
 
@@ -615,7 +621,8 @@
 															//TITLE
 															echo '<div class="card-title py-3">';
 																if($statistic_unit_before) echo '<span>'.$statistic_unit_before.'</span>';
-																echo '<span class="animated-amount" data-amt="'.$statistic_amount.'">0</span>';
+																//echo '<span class="'.$statistic_class.'" data-amt="'.$statistic_amount.'">0</span>';
+																echo '<span class="'.$statistic_class.'">'.$statistic_amount.'</span>';
 																if($statistic_unit_after) echo '<span>'.$statistic_unit_after.'</span>';
 															echo '</div>';
 															//TEXT
